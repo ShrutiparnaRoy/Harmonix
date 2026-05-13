@@ -1,5 +1,7 @@
 This project implements an automated pipeline for audio processing and music information retrieval. The system follows a modular flow from user input to feature-driven results.
 
+**LINK:**  https://musicgenreclassification-gvunx8qtz6cpkx4sslsebp.streamlit.app/
+
 **System Workflow**
 
 User Authentication: Secure entry point via User Login to manage personal audio libraries.
