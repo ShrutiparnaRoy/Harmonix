@@ -15,8 +15,8 @@ from extensions import db, login_manager, bcrypt
 from models import User, History
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
+app.config['SECRET_KEY'] = ''
+app.config['SQLALCHEMY_DATABASE_URI'] = ''
 
 db.init_app(app)
 login_manager.init_app(app)
@@ -217,13 +217,13 @@ def login():
             msg = EmailMessage()
             msg.set_content(f'Your OTP for Harmonix is: {otp}')
             msg['Subject'] = 'Harmonix OTP Verification'
-            msg['From'] = 'srgtesting2004@gmail.com'
+            msg['From'] = ''
             msg['To'] = email
 
             try:
                 server = smtplib.SMTP('smtp.gmail.com', 587)
                 server.starttls()
-                server.login('srgtesting2004@gmail.com', 'dmko fouw kjdu qomh')
+                server.login('', '')
                 server.send_message(msg)
                 server.quit()
                 flash('An OTP has been sent to your email.', 'info')
